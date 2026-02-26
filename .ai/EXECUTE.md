@@ -20,7 +20,7 @@ Act as a Senior Software Engineer executing a Specification-Driven Development p
 3. Generate the actual source code for these foundational files. 
 4. **VERIFY & ANTI-LOOP:** Check the filesystem. Did you create a source code file for *every* `.md` file counted? If you fail to find or process a specific file after 2 attempts, SKIP IT, report it as skipped, and MOVE ON. Do NOT repeat the same search command endlessly.
 5. STOP and report: *"Phase 1 (Foundation) Complete. Processed [X] files. Skipped [Y] files."*
-6. **CREATE, DO NOT EDIT:** Assume the target source code files DO NOT EXIST YET. When generating the actual code from a `.md` specification, you MUST use your file creation tool (e.g., `write_to_file`, `create_file`). Do NOT use file editing/modifying tools, as they will fail if the file doesn't exist.
+6. **CREATE & RENAME (DO NOT EDIT):** Assume the target source code files DO NOT EXIST YET. You MUST use your file creation tool (e.g., `write_to_file`, `create_file`) to physically create them on the disk. Do NOT use file editing/modifying tools. **CRITICAL:** You must strip the `.md` extension from the target file name. For example, if the blueprint/prompt is `apps/client-web/package.json.md`, you MUST create the real source file exactly as `apps/client-web/package.json`.
 7. **EFFICIENT INVENTORY:** When identifying `.md` files for a phase, DO NOT execute dozens of individual search queries. Use a single directory listing tool or run a single terminal command (e.g., `find . -type f -name "*.md"`) to map all available specification files AT ONCE.
 
 **PHASE 2: CORE LOGIC & BACKEND**
