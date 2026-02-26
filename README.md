@@ -13,9 +13,20 @@ designed to operate with strict execution rules and minimal output.
 
 To use CodingAgency, your project must follow this structure:
 
-/your-project │ ├── ai/ │ ├── AI_SYSTEM_RULES.md │ ├── START.md │ ├──
-REVIEW.md │ ├── EXECUTE.md │ ├── DEBUG.md │ ├── DEPLOY.md │ └──
-DOCUMENT.md │ └── PRD.md
+```
+/your-project
+│
+├── ai/
+│   ├── AI_SYSTEM_RULES.md
+│   ├── START.md
+│   ├── REVIEW.md
+│   ├── EXECUTE.md
+│   ├── DEBUG.md
+│   ├── DEPLOY.md
+│   └── DOCUMENT.md
+│
+└── PRD.md
+```
 
 ### Requirements
 
