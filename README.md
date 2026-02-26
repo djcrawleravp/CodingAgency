@@ -1,103 +1,75 @@
 # CodingAgency
 
-CodingAgency is a structured Markdown-based AI workflow that turns a
-`PRD.md` into a fully generated, reviewed, executed, debugged, deployed,
-and documented project.
+CodingAgency is an AI-native software production pipeline.
 
-It works through a sequence of specialized agent instruction files
-designed to operate with strict execution rules and minimal output.
+It transforms a single `PRD.md` into a generated, reviewed, executed,
+debugged, deployed, and documented system through deterministic,
+stage-isolated LLM agents.
 
-------------------------------------------------------------------------
+The architecture enforces strict cognitive separation between phases.
+Each agent operates under constrained responsibility, minimizing drift,
+token waste, and cross-stage contamination.
 
-## 📂 Project Structure
+All prompts were engineered, iterated, validated, and stress-tested
+exclusively with **Gemini 3.1 Pro**.  
+However, the framework is fully model-agnostic and designed to remain
+robust across frontier and mid-tier LLMs.
 
-To use CodingAgency, your project must follow this structure:
+---
 
-```
-/your-project
-│
-├── .ai/
-│   ├── AI_SYSTEM_RULES.md
-│   ├── START.md
-│   ├── REVIEW.md
-│   ├── EXECUTE.md
-│   ├── DEBUG.md
-│   ├── DEPLOY.md
-│   └── DOCUMENT.md
-│
-└── PRD.md
-```
+# Architectural Principles
 
-### Requirements
+### 1. Deterministic Stage Isolation
+Planning, validation, implementation, debugging, deployment, and
+documentation are separated into independent execution phases.
+No stage overlaps responsibility.
 
--   Place the `.ai` folder in the **root** of your project.
--   Place your project specification file `PRD.md` in the **root** of
-    your project.
+### 2. Token Density Optimization
+Prompts are structured to maximize signal per token:
+- No conversational overhead
+- Minimal verbosity
+- Structured output enforcement
+- Explicit execution directives
 
-------------------------------------------------------------------------
+### 3. PRD as Single Source of Truth
+All architectural and implementation decisions derive strictly from
+`PRD.md`. No implicit assumptions override defined requirements.
 
-## 🚀 How It Works
+### 4. Model-Strength Alignment
+Different phases require different cognitive capabilities.
+Model selection should match task type — not raw model size.
 
-The workflow is sequential and must be executed in order.
+---
 
-### Step 1 --- START
+# Model Alignment Strategy
 
-Run the following prompt in your AI environment:
+## START — Planning & Scaffolding  
+Structured reasoning model recommended  
+(e.g., GPT-4.1, Claude Sonnet, Gemini 1.5 Pro)
 
-Read AI_SYSTEM_RULES.md and then execute START.md. I remind you of your
-most critical directive: ZERO CHAT OUTPUT. Use your tools to create the
-files silently and respond to me ONLY with the list of created files. No
-echoes or previews.
+## REVIEW — Architectural Validation  
+High analytical reasoning model recommended  
+(e.g., Claude Sonnet, GPT-4.1)
 
-------------------------------------------------------------------------
+## EXECUTE — Code Generation  
+Strong coding model required  
+(e.g., Claude Sonnet, GPT-4.1)  
+Frontier-tier models only for large or complex systems.
 
-### Step 2 --- REVIEW
+## DEBUG — Logical Resolution  
+Multi-step reasoning model recommended  
+(e.g., Claude Sonnet, GPT-4.1)
 
-After START completes, execute:
+## DEPLOY — Infrastructure Execution  
+Structured reasoning model sufficient  
+(e.g., GPT-4.1, Claude Sonnet)
 
-Read AI_SYSTEM_RULES.md and then execute REVIEW.md.
+## DOCUMENT — Structured Summarization  
+Efficient structured model sufficient  
+(e.g., GPT-4.1-mini, Gemini Flash)
 
-------------------------------------------------------------------------
+---
 
-### Step 3 --- EXECUTE
+CodingAgency is not a prompt collection.
 
-Read AI_SYSTEM_RULES.md and then execute EXECUTE.md.
-
-------------------------------------------------------------------------
-
-### Step 4 --- DEBUG
-
-Read AI_SYSTEM_RULES.md and then execute DEBUG.md.
-
-------------------------------------------------------------------------
-
-### Step 5 --- DEPLOY
-
-Read AI_SYSTEM_RULES.md and then execute DEPLOY.md.
-
-------------------------------------------------------------------------
-
-### Step 6 --- DOCUMENT
-
-Read AI_SYSTEM_RULES.md and then execute DOCUMENT.md.
-
-------------------------------------------------------------------------
-
-## 🧠 Philosophy
-
--   The PRD is the single source of truth.
--   Each stage operates with strict role separation.
--   Output must be controlled and intentional.
--   Automation first. Conversation second.
-
-------------------------------------------------------------------------
-
-## ⚡ Usage
-
-1.  Create your project.
-2.  Add the `.ai` folder at the root.
-3.  Add your `PRD.md` at the root.
-4.  Paste the START prompt.
-5.  Let the agents build.
-
-That's it.
+It is a staged cognitive architecture for AI-driven software production.
