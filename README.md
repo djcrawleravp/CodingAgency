@@ -30,7 +30,7 @@ To use CodingAgency, your project must follow this structure:
 
 ### Requirements
 
--   Place the `ai` folder in the **root** of your project.
+-   Place the `.ai` folder in the **root** of your project.
 -   Place your project specification file `PRD.md` in the **root** of
     your project.
 
@@ -95,7 +95,7 @@ Read AI_SYSTEM_RULES.md and then execute DOCUMENT.md.
 ## ⚡ Usage
 
 1.  Create your project.
-2.  Add the `ai` folder at the root.
+2.  Add the `.ai` folder at the root.
 3.  Add your `PRD.md` at the root.
 4.  Paste the START prompt.
 5.  Let the agents build.
