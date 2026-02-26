@@ -1,75 +1,46 @@
 # CodingAgency
 
-CodingAgency is an AI-native software production pipeline.
+**From PRD to Production — via Structured AI Orchestration. 🚀**
 
-It transforms a single `PRD.md` into a generated, reviewed, executed,
-debugged, deployed, and documented system through deterministic,
-stage-isolated LLM agents.
+CodingAgency is an AI-native development pipeline that transforms a
+single `PRD.md` into a fully generated, reviewed, executed, debugged,
+deployed, and documented system.
 
-The architecture enforces strict cognitive separation between phases.
-Each agent operates under constrained responsibility, minimizing drift,
-token waste, and cross-stage contamination.
+It is not a prompt collection.  
+It is a staged cognitive architecture.
 
-All prompts were engineered, iterated, validated, and stress-tested
-exclusively with **Gemini 3.1 Pro**.  
-However, the framework is fully model-agnostic and designed to remain
-robust across frontier and mid-tier LLMs.
+Each phase operates with strict role boundaries to prevent drift,
+reduce token waste, and enforce deterministic progression from idea
+to production-ready code.
+
+All prompts were carefully engineered, iterated, corrected, and
+validated using **Gemini 3.1 Pro**, and are designed to remain robust
+across any capable modern LLM.
 
 ---
 
-# Architectural Principles
+## 🧠 Core Design Principles
 
-### 1. Deterministic Stage Isolation
+**Stage Isolation**  
 Planning, validation, implementation, debugging, deployment, and
-documentation are separated into independent execution phases.
-No stage overlaps responsibility.
+documentation are executed as independent cognitive steps.
 
-### 2. Token Density Optimization
-Prompts are structured to maximize signal per token:
-- No conversational overhead
-- Minimal verbosity
-- Structured output enforcement
-- Explicit execution directives
+**Token Efficiency ⚡**  
+Prompts are optimized for signal density — minimal verbosity,
+maximum structured output.
 
-### 3. PRD as Single Source of Truth
-All architectural and implementation decisions derive strictly from
-`PRD.md`. No implicit assumptions override defined requirements.
+**Single Source of Truth 📜**  
+`PRD.md` defines the system. All decisions derive from it.
 
-### 4. Model-Strength Alignment
-Different phases require different cognitive capabilities.
-Model selection should match task type — not raw model size.
+**Model-Strength Alignment 🎯**  
+Different phases benefit from different model capabilities.
+Use strong reasoning models for planning and validation.
+Use strong coding models for execution and debugging.
+Use efficient models for documentation.
 
 ---
 
-# Model Alignment Strategy
+CodingAgency enforces clarity through structure.
 
-## START — Planning & Scaffolding  
-Structured reasoning model recommended  
-(e.g., GPT-4.1, Claude Sonnet, Gemini 1.5 Pro)
-
-## REVIEW — Architectural Validation  
-High analytical reasoning model recommended  
-(e.g., Claude Sonnet, GPT-4.1)
-
-## EXECUTE — Code Generation  
-Strong coding model required  
-(e.g., Claude Sonnet, GPT-4.1)  
-Frontier-tier models only for large or complex systems.
-
-## DEBUG — Logical Resolution  
-Multi-step reasoning model recommended  
-(e.g., Claude Sonnet, GPT-4.1)
-
-## DEPLOY — Infrastructure Execution  
-Structured reasoning model sufficient  
-(e.g., GPT-4.1, Claude Sonnet)
-
-## DOCUMENT — Structured Summarization  
-Efficient structured model sufficient  
-(e.g., GPT-4.1-mini, Gemini Flash)
-
----
-
-CodingAgency is not a prompt collection.
-
-It is a staged cognitive architecture for AI-driven software production.
+Structure produces reliability.  
+Reliability produces deployable systems. 🏗️
