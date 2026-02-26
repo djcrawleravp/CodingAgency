@@ -16,7 +16,7 @@ To use CodingAgency, your project must follow this structure:
 ```
 /your-project
 │
-├── ai/
+├── .ai/
 │   ├── AI_SYSTEM_RULES.md
 │   ├── START.md
 │   ├── REVIEW.md
