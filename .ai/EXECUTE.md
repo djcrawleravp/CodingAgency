@@ -22,6 +22,7 @@ Act as a Senior Software Engineer executing a Specification-Driven Development p
 5. STOP and report: *"Phase 1 (Foundation) Complete. Processed [X] files. Skipped [Y] files."*
 6. **CREATE & RENAME (DO NOT EDIT):** Assume the target source code files DO NOT EXIST YET. You MUST use your file creation tool (e.g., `write_to_file`, `create_file`) to physically create them on the disk. Do NOT use file editing/modifying tools. **CRITICAL:** You must strip the `.md` extension from the target file name. For example, if the blueprint/prompt is `apps/client-web/package.json.md`, you MUST create the real source file exactly as `apps/client-web/package.json`.
 7. **EFFICIENT INVENTORY:** When identifying `.md` files for a phase, DO NOT execute dozens of individual search queries. Use a single directory listing tool or run a single terminal command (e.g., `find . -type f -name "*.md"`) to map all available specification files AT ONCE.
+8. **TRANSLATE, DO NOT COPY:** You are strictly forbidden from copying the raw markdown prompt content into the final source files. You must TRANSLATE the pseudocode into actual, fully implemented, and functional code. Remove all metadata headers (like "Purpose:", "Dependencies:", or "PSEUDOCODE"). The final created file MUST contain ONLY valid syntax for the target language (e.g., valid TypeScript or valid JSON) and absolutely no markdown conversational text.
 
 **PHASE 2: CORE LOGIC & BACKEND**
 1. Identify all `.md` prompts related to backend services, APIs, controllers, or workers.
